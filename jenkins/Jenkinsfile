@@ -1,7 +1,8 @@
 pipeline {
     environment {
     registry = "rmuruge/maven-project"
-    registryCredential = ‘dockerhub-rmuruge’
+    registryCredential = 'dockerhub'
+        dockerImage = ''
     }
     
     agent any
