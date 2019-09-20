@@ -10,6 +10,6 @@ WORKDIR /app/maven-project
 
 COPY target/maven-project-1.0-SNAPSHOT.jar /app/maven-project
 
-CMD ["/bin/bash", "java -cp maven-project-1.0-SNAPSHOT.jar com.mycompany.app.App"]
+CMD ["java -cp maven-project-1.0-SNAPSHOT.jar com.mycompany.app.App"]
 
 
