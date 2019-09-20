@@ -46,7 +46,7 @@ pipeline {
         stage('Deploy Image') {
             steps{
                 sh "set +e; docker rm $application; set -e"
-                sh "docker run -d --name $application $registry:$BUILD_NUMBER"
+                sh "docker run -it --name $application $registry:$BUILD_NUMBER /bin/bash" 
                 }
         
         }  
