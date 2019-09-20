@@ -1,6 +1,7 @@
 pipeline {
     environment {
     registry = "rmuruge/maven-project"
+    application = "maven-project"
     registryCredential = 'dockerhub'
         dockerImage = ''
     }
@@ -33,7 +34,7 @@ pipeline {
         }
 
         
-        stage('Deploy Image') {
+        stage('Push Image') {
             steps{
                 script {
                     docker.withRegistry( '', registryCredential ) {
@@ -42,6 +43,11 @@ pipeline {
                 }
             }
         }
-        
+        stage('Deploy Image') {
+            steps{
+                sh "docker run -d --name $application $registry:$BUILD_NUMBER"
+                }
+            }
+        }  
     }
 }
