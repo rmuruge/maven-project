@@ -37,10 +37,10 @@
         </configuration>
       </plugin>
     </plugins>
-  </build>
+
   <!-- Copy shell -->
   
-  <build>
+
     <plugins>
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
@@ -49,7 +49,7 @@
           <execution>
             <id>copy-resources</id>
             <!-- here the phase you need -->
-            <phase>Build</phase>
+           
             <goals>
               <goal>copy-resources</goal>
             </goals>
