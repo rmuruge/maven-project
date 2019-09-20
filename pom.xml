@@ -69,5 +69,6 @@
         </executions>
       </plugin>
     </plugins>
+  </build>
   <!-- End -->
 </project>
