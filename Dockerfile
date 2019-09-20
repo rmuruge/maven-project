@@ -9,7 +9,3 @@ RUN mkdir /app/maven-project
 WORKDIR /app/maven-project
 
 COPY target/maven-project-1.0-SNAPSHOT.jar /app/maven-project
-
-CMD ["java -cp maven-project-1.0-SNAPSHOT.jar com.mycompany.app.App"]
-
-
